@@ -1,5 +1,5 @@
 import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 /*
   Generated class for the Login page.
@@ -66,22 +66,7 @@ export class LoginPage {
   login: { username?: string, password?: string } = {};
   submitted = false;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) { }
-
   onLogin(form) {
-
-    this.submitted = true;
-
-    let alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-      buttons: ['OK',"Cancelar"]
-    });
-    alert.present();
-
-    if (form.valid) {
-      
-    }
 
   }
 

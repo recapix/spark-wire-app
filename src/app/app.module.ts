@@ -21,4 +21,6 @@ import { LoginPage } from '../pages/login/login';
   ],
   providers: []
 })
-export class AppModule {}
+export class AppModule {
+
+}
