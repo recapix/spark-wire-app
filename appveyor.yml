@@ -8,9 +8,7 @@ install:
   - ps: Install-Product node $env:nodejs_version
   # install modules
   - npm install 
-  - npm install -g bower
   - npm install -g ionic cordova
-  - bower install
   - ionic state reset
 
 
