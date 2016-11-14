@@ -5,11 +5,13 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { LoginPage, HomePage } from '../pages/';
 
 
+import { environment } from '../environments/environment';
+
+
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  
   @ViewChild(Nav) public nav: Nav;
 
   public rootPage: any;
@@ -32,26 +34,21 @@ export class MyApp {
     ];
   }
 
-
   private initializeApp(): void {
-
-
 
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
+      console.log('environment ' + environment);
     });
   }
 
-
   public openPage(page: any): void {
-  // close the menu when clicking a link from the menu
+    // close the menu when clicking a link from the menu
     this.menu.close();
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
   }
-
-
 }

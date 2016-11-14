@@ -1,6 +1,8 @@
 import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { HomePage } from "../home";
+
 /*
   Generated class for the Login page.
 
@@ -63,6 +65,8 @@ export class LoginPage {
   formState: any = "in";
 
 
+  constructor(private nav: NavController) { }
+
   login: { username?: string, password?: string } = {};
   submitted = false;
 
@@ -70,8 +74,8 @@ export class LoginPage {
 
   }
 
-  onLoginFacebook(){
-
+  onLoginFacebook() {
+    this.nav.push(HomePage);
   }
 
 }

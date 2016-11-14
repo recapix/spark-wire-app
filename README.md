@@ -1,5 +1,4 @@
 # spark-wire-app
 
-* npm install
-* bower install
+* npm install 
 * ionic state reset
